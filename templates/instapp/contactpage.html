@@ -1,0 +1,75 @@
+{% extends 'instapp/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content%}
+    <style media="screen">
+        form{
+          padding:10px;
+          
+          border-radius:20px;
+        }
+        .cls1 {
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+text-align: left;
+width: 400px;
+line-height: 26px;
+margin-bottom: 10px;
+border-radius: 20px;
+outline-color:darksalmon ;
+outline-style: outset}
+        
+      </style>
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-6 " >
+                <h3 class="text-center" >Register Here For online Courses</h3>
+                <form method="POST" style="background-color:khaki">
+                     {% csrf_token %}
+                            
+                    
+
+                    <input type="text" class="form-control cls1 " name="fname" placeholder="First Name" >
+                                            
+                    <input type="text" class="form-control cls1 " name="lname" placeholder="Last Name">
+                                        
+                    <input type="email" class="form-control cls1 " name="email" placeholder="Email">
+                                            
+                    <input type="number" class="form-control cls1" name="mobile" placeholder="Mobile">
+                    
+                    <input type="text" class="form-control  cls1" name="course" placeholder="Course">
+                                            
+                     <center><input type="submit" value="submit" >
+                            <input type="reset" value="cancel"></center>
+                                     
+                            
+                </form>
+           
+    
+                    
+                       
+            </div>
+                    
+                       
+                    
+                    
+                  
+                              
+            <div class="col-md-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4450476895845!2d78.44357301529921!3d17.438400305920748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb910956383b7f%3A0xb25b7c2fe2e4fd5d!2sNarayana%20Tech%20House!5e0!3m2!1sen!2sin!4v1663172943775!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    
+    
+    {% endblock %}
+</body>
+</html>

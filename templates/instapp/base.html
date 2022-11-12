@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: Cornsilk;">
+  <style>
+    .footer {
+       position: fixed;
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       
+       background-color: black;
+       text-align: center;
+      
+    }
+
+    </style>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">NTH</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/homepage">Home</a></li>
+      <li><a href="/contactpage">Contacts</a></li>
+      <li><a href="/servicepage">Services</a></li>
+      <li><a href="/feedbackpage">Feedback</a></li>
+      <li><a href="/gallerypage">Gallery</a></li>
+
+    </ul>
+  </div>
+</nav>
+<div class="m-4 pb-5 " style="background-color: SkyBlue;">
+  <h1 class="text-center">Narayana Tech House</h1>
+</div>
+ 
+      
+
+{% block content %}
+{% endblock %}
+
+<div class="footer" style="color:white"><h3>Flat No 303, 3rd floor, Naga Sai Nivas Prime Hospital Lane, opposite to Balaji Towers, Ameerpet, Hyderabad, Telangana 500016</h3></div>
+
+</body>
+</html>

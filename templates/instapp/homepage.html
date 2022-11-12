@@ -1,0 +1,49 @@
+{% extends 'instapp/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content%}
+    <img src= "{% static '/instapp/images/nthlogo.jpg' %}" style="width:220px;height:240px "align='left'>
+    <div class="container" style="border:2px solid black;padding-left:20px;">
+        <div class="row" >
+            <h3 style="background-color:Coral;">About NTH</h3>
+            <p>Narayana Tech House (Pronounced: NTH) is a leading software training institute providing Software Training, Project Guidance.</p>
+
+            
+            <p>Software Courses We Provide</p>
+            <ul>
+                <li>Python</li>
+                <li>UI</li>
+                <li>MySQL</li>
+                <li>DevOps</li>
+                <li>Oracle</li>
+                <li>AWS(Windows/Linux Server Network & Visualization)</li>
+                <li>Testing(Selenium and Automation)</li>
+                <li>Python Full Stack with Real Time Project</li>
+                <li>Django with Real Time Project</li>
+            </ul>
+
+
+            <div>
+                &ensp;
+                <h4>Call Or Wahatsapp</h4>
+                <h5>+91-9010607010 </h5>
+                <h5>+91-8179817681</h5>
+                <h3>Email</h3>
+                    <h4>narayanaonlinetraining@gmail.com</h4>
+
+
+                </div>
+        </div>
+    </div>
+    
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,104 @@
+{% extends 'instapp/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% block content%}
+    <style media="screen">
+        form{
+          padding:10px 50px;
+          box-shadow:0px 0px 10px;
+          border-radius:20px;
+          background-color: khaki;
+        }
+        table{
+          padding:10px 50px;
+          box-shadow:0px 0px 10px;
+          background-color: khaki;
+        }
+        th, td {
+             
+             
+             padding: 5px;
+        }
+        th{background-color:lightcoral;}
+        .center {
+             margin-left: auto;
+             margin-right: auto;
+        }
+        .cls2{ 
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+text-align: left;
+width: 400px;
+line-height: 26px;
+margin-bottom: 10px;
+border-radius: 20px;
+outline-color: thistle;
+outline-style: outset}
+
+table,th,td{ border: 1px solid black;
+        border-collapse: collapse;}
+        
+      </style>
+      <h2 class="text-center">Feedback Details</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 shadow-lg" >
+                    <form method="POST" class="shadow-lg ">
+                        {% csrf_token %}
+                        <h3 class="text-center">Enter Feedback</h3>
+                    <label>Enter the name</label>
+                    <input type="text" class="form-control cls2" name="name">
+                    <label>Enter the ratings</label>
+                    <input type="number" class="form-control cls2" name="ratings">
+                    <label>Enter the comments as you like</label>
+                    <textarea type="text" class="form-control cls2" name="comments"></textarea>
+                    <div class="text-center mt-2">
+                    <input type="submit" value="submit" class="btn btn-outline-success btn-lg mr-2">
+                    <input type="reset" value="cancel" class="btn btn-outline-danger btn-lg ml-2">
+                    </div>
+                    </form>
+                </div>
+                
+                <div clas="col-md-6 " >
+                    <h3 class="text-center">Reiviews</h3>
+                    <table class="center ">
+                        <thead >
+                        <tr >
+                            <th class="text-center">name</th>
+                            <th class="text-center">ratings</th>
+                            <th class="text-center">comments</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if feedbk %}
+                            {% for i in feedbk %}
+                        <tr>
+                        <td>{{i.name}}</td>
+                        <td>{{i.ratings}}</td>
+                        <td>{{i.comments}}</td>
+                        </tr>
+                        {% endfor %}
+                        {% endif %}
+                            
+                        
+                        </tbody>
+                    </table>
+                    
+                    
+                        
+                </div>
+            </div>    
+        </div>
+    
+    {% endblock %}
+</body>
+</html>

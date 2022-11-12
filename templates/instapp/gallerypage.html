@@ -1,0 +1,58 @@
+
+{% extends 'instapp/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% block content%}
+    <style>
+        .pd{
+            padding: 20px;
+        }
+    </style>
+    
+    <div class="container-fluid" style=" padding-top: 30px;">
+        <div class="row" ><center>
+            <h2>Congratualtions To Python Full Stack Freshers(2021)</h2>
+            <div class="col-md-2 pd" >      
+                <img src= "{% static '/instapp/images/image1.jpg' %}" width="200px"  height="150px">
+                <h3>Sai Priyanka</h3>
+                <h4>Placed in TCS</h4>
+            </div>
+            <div class="col-md-2 pd" >      
+                <img src= "{% static '/instapp/images/image2.jpg' %}" width="200px"  height="150px">
+                <h3 >Triveni</h3>
+                <h4>Placed in TCS</h4>
+            </div>
+            <div class="col-md-2 pd" >      
+                <img src= "{% static '/instapp/images/image3.jpg' %}" width="200px"  height="150px">
+                <h3 >Akshith Reddy</h3>
+                <h4>Placed in TCS</h4>
+            </div>
+            <div class="col-md-2 pd">      
+                <img src= "{% static '/instapp/images/image4.jpg' %}" width="200px"  height="150px">
+                <h3 >Prasad Reddy</h3>
+                <h4>Placed in TCS</h4>
+            </div>
+            <div class="col-md-2 pd" >      
+                <img src= "{% static '/instapp/images/image5.jpg' %}" width="200px"  height="150px">
+                <h3 >Surabh Lodi</h3>
+                <h4>Placed in TCS</h4>
+            </div>
+            <div class="col-md-2 pd" >      
+                <img src= "{% static '/instapp/images/image6.jpg' %}" width="200px"  height="150px">
+                <h3 >Aishwarya</h3>
+                <h4>Placed in TCS</h4>
+            </div></center>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

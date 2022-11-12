@@ -1,0 +1,57 @@
+{% extends 'instapp/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+        {% block content%}
+        
+          
+        <h2 class="text-center">Course Details</h2>
+        <div class="container">
+          <div class="row">
+            <table class="table table-bordered">
+              <thead class="bg-primary">
+                <tr >
+                  <th class="text-center">courseno</th>
+                  <th class="text-center">coursename</th>
+                  <th class="text-center">timings</th>
+                  <th class="text-center">starting_date</th>
+                  <th class="text-center">duration</th>
+                  <th class="text-center">fees</th>
+                  <th class="text-center">trainer_name</th>
+                </tr>
+              </thead>
+              <tbody>
+                  {% if serve %}
+                  {% for i in serve %}
+                  
+                  
+                <tr>
+                  <td>{{i.course_no}}</td>
+                  <td>{{i.course_name}}</td>
+                  <td>{{i.timings}}</td>
+                  <td>{{i.starting_date}}</td>
+                  <td>{{i.duration}}</td>
+                  <td>{{i.fees}}</td>
+                  <td>{{i.trainer_name}}</td>
+                </tr>
+                {% endfor %}
+                {% endif %}
+                  
+                
+              </tbody>
+            </table>
+          
+          </div>
+        </div>
+        
+        {% endblock %}
+</body>
+</html>
